@@ -16,11 +16,12 @@ Once homebrew is installed, make sure npm is installed:
 
 
 ## client
-To install all dependencies for the client, enter the command:
+To install all dependencies for the client, make sure you're in the 'client'
+directory, and enter the command:
 
 `npm install`
 
-To start the app, make sure you're in the 'client' directory, and run the command:
+To start the app, and run the command:
 
 `npm start`
 
@@ -46,7 +47,7 @@ but increment the number. For example, if you ran
 
 `./deleteAndCreateContainer 1`
 
-made changes, and want to update the container, run the command
+then made changes, and want to update the container, run the command
 
 `./deleteAndCreateContainer 2`
 
