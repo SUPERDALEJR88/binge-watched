@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+# IMAGE_NAME=${1?Error: no image name given}
+IMAGE_NAME=binge-watched
+
+# VERSION=${2?Error: no version number given}
+VERSION=${1?Error: no version number given}
+
+VERSION_BEFORE=`expr $VERSION - 1`
+
+# CONTAINER_NAME=${3?Error: no contianer name given}
+CONTAINER_NAME=binge-watched
+
+docker stop $CONTAINER_NAME
+docker rm $CONTAINER_NAME
+
+docker system prune
+docker image rm $IMAGE_NAME:v0.0.$VERSION_BEFORE
+
+docker build -t $IMAGE_NAME:v0.0.$VERSION .
+docker run -d --name $CONTAINER_NAME -p 4000:80 $IMAGE_NAME:v0.0.$VERSION

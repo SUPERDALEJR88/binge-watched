@@ -1,0 +1,14 @@
+{
+  [
+    {
+      firstName: 'nathan',
+      lastName: 'carlson',
+      userName: 'newBootGoofin'
+    },
+    {
+      firstName: 'matt',
+      lastName: 'mccarthy',
+      userName: 'DaBluntLord'
+    }
+  ]
+}

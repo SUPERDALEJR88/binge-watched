@@ -1,0 +1,6 @@
+Flask
+Redis
+peewee
+flask_restful
+flask-cors
+argparse
